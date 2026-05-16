@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="">
 </head>
 <body>
-    
+
+<div class="container_login" id="container_login">
+
+  <!-- LOGIN -->
+  <div class="form-container_login login">
+    <h2>Faça seu login</h2>
+
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginSenha" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <!-- CADASTRO -->
+  <div class="form-container_login registro">
+    <h2>Cadastro</h2>
+
+    <input type="text" id="cadNome" placeholder="Nome">
+    <input type="email" id="cadEmail" placeholder="Email">
+    <input type="password" id="cadSenha" placeholder="Senha">
+
+    <button onclick="register()">Cadastrar</button>
+  </div>
+
+ 
+  <div class="overlay">
+    <div class="overlay-panel left">
+      <h2>Bem-vindo!</h2>
+      <p>Já tem conta?</p>
+      <button onclick="showLogin()">Entrar</button>
+    </div>
+
+    <div class="overlay-panel right">
+      <h2>Olá!</h2>
+      <p>Ainda não tem conta?</p>
+      <button onclick="showRegister()">Cadastrar</button>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
