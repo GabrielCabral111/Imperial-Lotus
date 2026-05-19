@@ -3,48 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
 <div class="container_login" id="container_login">
 
-  <!-- LOGIN -->
-  <div class="form-container_login login">
-    <h2>Faça seu login</h2>
+  <!-- LADO ESQUERDO -->
+  <div class="side left">
 
-    <input type="email" id="loginEmail" placeholder="Email">
-    <input type="password" id="loginSenha" placeholder="Senha">
+    <!-- LOGIN -->
+    <div class="form login">
+      <h2>Faça seu login</h2>
 
-    <button onclick="login()">Entrar</button>
-  </div>
+      <div class="input-box">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="loginEmail" placeholder="Email">
+      </div>
 
-  <!-- CADASTRO -->
-  <div class="form-container_login registro">
-    <h2>Cadastro</h2>
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="loginSenha" placeholder="Senha">
+      </div>
 
-    <input type="text" id="cadNome" placeholder="Nome">
-    <input type="email" id="cadEmail" placeholder="Email">
-    <input type="password" id="cadSenha" placeholder="Senha">
-
-    <button onclick="register()">Cadastrar</button>
-  </div>
-
- 
-  <div class="overlay">
-    <div class="overlay-panel left">
-      <h2>Bem-vindo!</h2>
-      <p>Já tem conta?</p>
-      <button onclick="showLogin()">Entrar</button>
+      <button class="btn primary" onclick="login()">Entrar</button>
     </div>
 
-    <div class="overlay-panel right">
-      <h2>Olá!</h2>
-      <p>Ainda não tem conta?</p>
-      <button onclick="showRegister()">Cadastrar</button>
+    <!-- CADASTRO -->
+    <div class="form cadastro">
+      <h2>Cadastro</h2>
+
+      <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" id="cadNome" placeholder="Nome">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="cadEmail" placeholder="Email">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="cadSenha" placeholder="Senha">
+      </div>
+
+      <button class="btn glow" onclick="register()">Cadastrar</button>
     </div>
+
+  </div>
+
+  <!-- LADO DIREITO -->
+  <div class="side right">
+
+    <div class="panel login-panel">
+      <img src="assets/imagens/logolotuss.png" alt="Logo">
+  <h2>Acesse sua conta novamente para continuar usando nossos serviços</h2>
+  <p>Ainda não tem uma conta?</p>
+  <button class="btn outline" onclick="showRegister()">Cadastre-se</button>
+</div>
+
+   <div class="panel cadastro-panel">
+    <img src="assets/imagens/logolotuss.png" alt="Logo">
+  <h2>Seja bem-vindo!</h2>
+  <p>Crie uma conta para ficar por dentro e usufruir dos nossos serviços</p>
+  <p>Já possui uma conta?</p>
+  <button class="btn neon" onclick="showLogin()">Entrar</button>
+</div>
+
   </div>
 
 </div>
+
+<script src="js/login.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #4c1d95, #1a0026);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container_login {
+  width: 100%;
+  max-width: 900px;
+  height: 520px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* LADOS */
+.side {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* ESQUERDA */
+.left {
+  background: rgba(255,255,255,0.9);
+  z-index: 2;
+}
+
+/* DIREITA */
+.right {
+  background: linear-gradient(180deg, #2e003e, #1a0026);
+  color: white;
+  z-index: 1;
+}
+
+
+/*  ANIMAÇÃO */
+.container_login.active .left {
+  transform: translateX(100%);
+}
+
+.container_login.active .right {
+  transform: translateX(-100%);
+}
+
+/* FORMULÁRIOS */
+.form {
+  position: absolute;
+  width: 100%;
+  max-width: 340px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  gap: 10px;
+
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.form h2 {
+  margin-bottom: 10px;
+}
+
+/* VISIBILIDADE */
+.login {
+  opacity: 1;
+  z-index: 2;
+}
+
+.cadastro {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container_login.active .form {
+  opacity: 0;
+}
+
+.container_login.active .cadastro {
+  opacity: 1;
+  z-index: 2;
+  transition-delay: 0.5s;
+}
+
+.container_login:not(.active) .login {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+
+/* PAINÉIS */
+.panel {
+  position: absolute;
+  width: 100%;
+  max-width: 320px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  gap: 12px;
+
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.panel img {
+  width: 100px;
+  margin-bottom: 10px;
+  
+}
+
+.panel h2 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.panel p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* CONTROLE */
+.login-panel {
+  opacity: 1;
+  z-index: 2;
+}
+
+.cadastro-panel {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container_login.active .panel {
+  opacity: 0;
+}
+
+.container_login.active .cadastro-panel {
+  opacity: 1;
+  z-index: 2;
+  transition-delay: 0.5s;
+}
+
+.container_login:not(.active) .login-panel {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+
+/* Entrada de dados */
+
+
+.input-box {
+  position: relative;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.input-box i {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  color: #888;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px 14px 14px 40px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: #000;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 0 0 2px #a855f7;
+}
+
+.input-box input::placeholder {
+  color: #666;
+}
+
+/* BOTÕES */
+.btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* estilos */
+.primary {
+  background: #7c3aed;
+  color: white;
+}
+
+.glow {
+  background: #00bcd4;
+  color: white;
+  box-shadow: 0 0 15px #00bcd4;
+}
+
+.neon {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 15px #3b82f6;
+}
+
+.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0 0 15px #9d26e2;
+}
+
