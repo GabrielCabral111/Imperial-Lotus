@@ -1,0 +1,200 @@
+body{
+    font-family: 'Poppins',sans-serif;
+background-color: #F6E0FF;
+margin:0;
+min-height: 100vh;
+
+}
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:url(../assets/imagens/Banner.png) ;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px 80px;
+    color: aliceblue;
+    position: relative;
+
+}
+header *{
+    position:relative;
+    z-index:2;
+}
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(139, 82, 181, 0.45);
+
+}
+nav{
+   display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+
+}
+.banner{
+  display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    flex:1;
+    max-width:450px;
+    color:white;
+ 
+}
+.banner h1{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.1;
+
+}
+.banner p{
+    font-size:20px;
+    max-width:365px;
+    margin:20px 0;
+}
+.banner button{
+    background:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+}
+.cupom{
+
+    background:linear-gradient(
+    to right,
+    #2B0038,
+    #8A2BE2
+    );
+    padding:12px;
+    text-align:center;
+
+}
+.cupom h2{
+    color:white;
+    font-size:14px;
+    font-weight:400;
+    margin:0;
+
+}
+.categorias{
+    padding:80px 100px;
+    text-align:center;
+
+}
+.explore{
+    color:#B58CC5;
+    font-size:14px;
+    font-weight:600;
+
+}
+.categorias h1{
+    font-size:42px;
+    margin:10px 0;
+
+}
+.categorias h2{
+    font-size:20px;
+    color:#8D5EA5;
+    font-weight:400;
+    max-width:650px;
+    margin:0 auto 60px;
+
+}
+.container-categorias{
+    display:flex;
+    justify-content:center;
+    gap:55px;
+
+}
+.card-categoria{
+    width:170px;
+    height:200px;
+    border-radius:22px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:15px;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    background-size:cover;
+    background-position:center;
+   
+}
+.labios{
+    background-image: url(../assets/imagens/Lábios.png);
+
+}
+
+.olhos{
+    background-image:url(../assets/imagens/Olhos.png);
+
+}
+
+.rosto{
+    background-image:url(../assets/imagens/Rosto.png);
+
+}
+
+.perfume{
+    background-image:url(../assets/imagens/Perfume.png);
+
+}
+.card-categoria{
+    position:relative;
+
+}
+.card-categoria::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+    to top,
+    rgba(90,18,116,0.9),
+    transparent
+
+    );
+
+}
+.card-categoria h3{
+    position:relative;
+    z-index:2;
+
+}
+.produtos{
+    padding:80px;
+
+}
+.subtitulo-produtos{
+    color:#B58CC5;
+    font-size:14px;
+
+}
+.banner-produto{
+    height:240px;
+    border-radius:25px;
+    margin:25px 0 50px;
+   background-image: url(../assets/imagens/Banner2.png);
+    background-size:cover;
+    background-position:center;
+
+}
+.container-produtos{
+
+}
+.card-produtos{
+
+}
+footer{
+
+}
